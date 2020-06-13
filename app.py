@@ -33,7 +33,6 @@ def login():
             hash = result_user.password
 
             if sha256_crypt.verify(POST_PASSWORD, hash):
-                print("Zalogowany")
                 flash('You were successfully logged in')
                 return redirect(url_for('index'))
         error = 'Invalid credentials'
