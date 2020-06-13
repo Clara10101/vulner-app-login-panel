@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Login</h1>
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+        <br/>
+      <img src="https://image.flaticon.com/icons/svg/1288/1288776.svg" id="icon" alt="User Icon" style="border-top-width: 30px;border-top-style: solid;border-bottom-width: 30px;border-bottom-style: solid;border-bottom-color: white;border-top-color: white;" />
+        <br/>
+    </div>
+
+    <!-- Login Form -->
+    <form action="/login" method="POST">
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <!--<a class="underlineHover" href="#">Forgot Password?</a>-->
+      <div style="color: red">
+      {% if error %}
+        <p class=error><strong>Error:</strong> {{ error }}
+      {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
