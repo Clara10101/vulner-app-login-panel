@@ -37,7 +37,7 @@ def login():
                 flash('You were successfully logged in')
                 return redirect(url_for('index'))
         else:
-            sha256_crypt.verify(POST_PASSWORD, "$5$rounds=test-string-mu1RFmA4c1U$lOitOIXcKjimfwceyqgLHFK1kKfsVGNLb/s3U2pdeKC")
+            sha256_crypt.verify(POST_PASSWORD, "$5$rounds=535000$jp1pVmu1RFmA4c1U$lOitOIXcKjimfwceyqgLHFK1kKfsVGNLb/s3U2pdeKC")
         error = 'Invalid credentials'
 
     return render_template('login.html', error=error)
